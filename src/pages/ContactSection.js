@@ -57,32 +57,9 @@ export default function ContactSection() {
   const [currentData, setCurrentData] = useState(blogs);
 
   return (
-    <div className="grid grid-cols-3 gap-4 w-screen h-full py-4">
-      {/* Main Content */}
-      <div className="col-span-2 text-slate-300 flex flex-col w-full gap-4 animate-fadeIn">
-        {currentData.map((item) => (
-          <div
-            key={item.id}
-            className="flex justify-between space-x-2 w-full h-fit items-center py-2 px-4 border-4 border-slate-500 rounded-lg shadow-sm transition-transform duration-300 hover:shadow-lg hover:-translate-y-2"
-          >
-            <div className="grid grid-rows-5 gap-2">
-              <p className="row-span-1 text-sm text-slate-400">{item.date}</p>
-              <div className="row-span-4">
-                <p className="text-xl font-medium">{item.name}</p>
-                <p className="line-clamp-3 text-slate-400">{item.des}</p>
-              </div>
-            </div>
-            <img
-              src={item.image}
-              alt={item.name}
-              className="w-[200px] h-32 object-cover rounded-2xl"
-            />
-          </div>
-        ))}
-      </div>
-
+    <div className="grid grid-cols-3 gap-4 h-full pt-20 max-sm:flex max-sm:flex-col">
       {/* Buttons */}
-      <div className="w-full h-full flex flex-col gap-2 py-10 px-10 text-slate-300">
+      <div className="w-full h-full flex flex-col gap-2 py-10 px-10 text-slate-300 sm:order-last">
         <div>
           <p>Let's share experiences, stories and knowledge together.</p>
           <div className="h-[1px] rounded-[50%] border-2 border-slate-500 w-[30%] my-4"></div>
@@ -102,6 +79,28 @@ export default function ContactSection() {
             Language
           </button>
         </div>
+      </div>
+      {/* Main Content */}
+      <div className="col-span-2 text-slate-300 flex flex-col w-full gap-4 animate-fadeIn sm:order-first">
+        {currentData.map((item) => (
+          <div
+            key={item.id}
+            className="flex justify-between space-x-2 w-full h-fit items-center py-2 px-4 border-4 border-slate-500 rounded-lg shadow-sm transition-transform duration-300 hover:shadow-lg hover:-translate-y-2"
+          >
+            <div className="grid grid-rows-5 gap-2">
+              <p className="row-span-1 text-sm text-slate-400">{item.date}</p>
+              <div className="row-span-4">
+                <p className="text-xl font-medium">{item.name}</p>
+                <p className="line-clamp-3 text-slate-400">{item.des}</p>
+              </div>
+            </div>
+            <img
+              src={item.image}
+              alt={item.name}
+              className="w-[200px] h-32 object-cover rounded-2xl"
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

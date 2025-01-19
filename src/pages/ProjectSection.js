@@ -17,7 +17,7 @@ export default function ProjectSection() {
   ];
 
   return (
-    <div className="">
+    <div className="max-sm:mx-10">
       <div className="grid place-items-center text-slate-300 text-xl">
         <p className="text-3xl">My Project Experience Posts</p>
         <p>Explore projects I've worked in 2025</p>

@@ -35,8 +35,18 @@ export default function HomeSection() {
   ];
 
   return (
-    <div className="flex justify-around px-10 text-slate-300 items-center w-full">
-      <div className="text-2xl space-y-2 animate-slideOut">
+    <div className="flex justify-around px-10 text-slate-300 items-center w-full max-sm:flex-col max-sm:px-2">
+      {/* Avatar */}
+      <div className="h-80 rounded-[50%] border-4 w-fit animate-slideIn sm:order-last max-sm:mb-4">
+        <img
+          src="./avt.jpg"
+          alt="Avatar"
+          className="h-full rounded-[50%] ring-8 ring-cyan-500 animate-glow"
+        />
+      </div>
+
+      {/* Text */}
+      <div className="text-2xl space-y-2 animate-slideOut sm:order-first">
         <h1>Hello World, I'm</h1>
         <p>
           <TrueFocus
@@ -90,12 +100,6 @@ export default function HomeSection() {
             </a>
           ))}
         </div>
-      </div>
-      <div className="h-80 rounded-[50%] border-4 w-fit animate-slideIn">
-        <img
-          src="./avt.jpg"
-          className="h-full rounded-[50%] ring-8 ring-cyan-500 animate-glow"
-        />
       </div>
     </div>
   );
