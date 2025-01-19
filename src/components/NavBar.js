@@ -44,7 +44,7 @@ export default function NavBar() {
 
   return (
     <div
-      className={`fixed z-50 w-full max-sm:px-20 px-6 font-semibold transition-colors duration-300 ${navbarBg}`}
+      className={`fixed z-50 w-full px-6 max-sm:px-2 font-semibold transition-colors duration-300 ${navbarBg}`}
     >
       <div className="flex justify-between items-center py-3 mx-4 max-sm:mx-2">
         <h1 className="text-cyan-400 text-2xl cursor-pointer">

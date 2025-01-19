@@ -17,10 +17,10 @@ export default function ProjectSection() {
   ];
 
   return (
-    <div className="max-sm:mx-10">
+    <div className="h-fit max-sm:w-screen  max-sm:px-4">
       <div className="grid place-items-center text-slate-300 text-xl">
-        <p className="text-3xl">My Project Experience Posts</p>
-        <p>Explore projects I've worked in 2025</p>
+        <p className="text-3xl font-bold max-sm:text-2xl">My Project Experience Posts</p>
+        <p className="max-sm:text-lg">Explore projects I've worked in 2025</p>
       </div>
       <div className="text-slate-300 flex flex-wrap gap-4 mt-4 animate-fadeIn">
         {projects.map((tech) => (

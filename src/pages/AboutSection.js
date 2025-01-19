@@ -83,12 +83,13 @@ export default function AboutSection() {
 
   return (
     <div className="flex h-full flex-col space-y-10 justify-center items-center">
+      <div className="w-full flex items-center space-x-4">
+        <div className="h-fit border-slate-500 rounded border-2 w-12"></div>
+        <p className="text-2xl font-bold whitespace-nowrap ">About Me</p>
+        <div className="h-fit border-slate-500 rounded border-2 w-full"></div>
+      </div>
       <div className="flex bg-slate-800 py-4 rounded-2xl max-sm:flex-col">
-        <div className="grid place-items-center space-y-4">
-          <div className="flex text-2xl font-bold items-center">
-            <p className="pr-10">About Me</p>
-            <div className="h-fit border-slate-500 rounded border-2 w-[300px]"></div>
-          </div>
+        <div className="grid w-full place-items-center space-y-4">
           <div className="relative h-60 rounded-[50%] w-fit shadow-lg">
             <img src="./avt2.jpg" className="h-full rounded-[50%]" />
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-sky-400/60 to-transparent rounded-full"></div>
@@ -118,7 +119,7 @@ export default function AboutSection() {
             </p>
           </div>
         </div>
-        <div className="box-border mt-10 flex-col space-y-4 items-center justify-center flex">
+        <div className="box-border mt-10 flex-col space-y-4 items-center justify-center flex max-sm:px-1 px-12">
           <p className="border-l-4 border-cyan-400 pl-4">
             As a highly motivated and eager learner, I'm excited to contribute
             my skills to a dynamic frontend development team. Through
@@ -136,7 +137,7 @@ export default function AboutSection() {
           </p>
         </div>
       </div>
-      <div className="w-fit">
+      <div className="w-full">
         <div className="flex items-center space-x-4">
           <div className="h-fit border-slate-500 rounded border-2 w-12"></div>
           <p className="text-2xl font-bold">Skills</p>
@@ -195,7 +196,7 @@ export default function AboutSection() {
           </button>
         </ul>
         {isTechStack ? (
-          <div className="h-fit text-slate-300 flex flex-wrap gap-4 mt-4 animate-fadeIn">
+          <div className="h-fit text-slate-300 flex flex-wrap gap-4 mt-4 max-sm:justify-center animate-fadeIn">
             {technologies.map((tech) => (
               <div
                 key={tech.id}
@@ -211,7 +212,7 @@ export default function AboutSection() {
             ))}
           </div>
         ) : (
-          <div className="text-slate-300 flex flex-wrap gap-4 mt-4 animate-fadeIn">
+          <div className="text-slate-300 flex flex-wrap gap-4 max-sm:justify-center mt-4 animate-fadeIn">
             {tools.map((tech) => (
               <div
                 key={tech.id}

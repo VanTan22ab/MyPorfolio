@@ -35,7 +35,7 @@ export default function HomeSection() {
   ];
 
   return (
-    <div className="flex justify-around px-10 text-slate-300 items-center w-full max-sm:flex-col max-sm:px-2">
+    <div className="h-screen flex justify-around px-10 text-slate-300 items-center w-full max-sm:flex-col max-sm:px-2">
       {/* Avatar */}
       <div className="h-80 rounded-[50%] border-4 w-fit animate-slideIn sm:order-last max-sm:mb-4">
         <img
@@ -63,14 +63,14 @@ export default function HomeSection() {
           Welcome to my personal website{" "}
           <WavingHandIcon className="mx-2" fontSize="small" />
         </p>
-        <div className="flex space-x-8">
+        <div className="flex space-x-4 max-sm:space-x-2">
           {icons.map((icon, index) => (
             <a
               key={index}
               href={icon.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative w-24 h-24 flex items-center justify-center"
+              className="relative w-24 h-24 max-sm:w-20 max-sm:h-20 flex items-center justify-center"
             >
               {/* Main icon with hover ring effect */}
               <div
