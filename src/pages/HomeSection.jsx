@@ -35,7 +35,7 @@ export default function HomeSection() {
   ];
 
   return (
-    <div className="h-screen flex justify-around px-10 text-slate-300 items-center w-full max-sm:flex-col max-sm:px-2">
+    <div className="h-screen flex justify-around px-10 text-slate-300 items-center w-full max-sm:flex-col max-sm:px-2 max-sm:items-center">
       {/* Avatar */}
       <div className="h-80 rounded-[50%] border-4 w-fit animate-slideIn sm:order-last max-sm:mb-4">
         <img
